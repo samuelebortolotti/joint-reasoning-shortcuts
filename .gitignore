@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Datasets and generated caches (see README.md / `make data`)
+rss/data/
+rss/datasets/utils/2mnist_*digits/
+rss/clevr/
+
+# Training outputs
+rss/best_models_*/
+rss/*.csv
+*.pth
+*.pt
+!rss/preprocessing/yolo/*.pt
+
+# Experiment tracking
+wandb/
+
+# Docs build
+docs/build/
+.nojekyll
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/

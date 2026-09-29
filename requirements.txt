@@ -1,0 +1,34 @@
+# Core dependencies for training/evaluating the CBMs in this repo
+# (MNIST-Add, MNIST-SumParity, Clevr, BDD-OIA; DPL, CBNM, DSL, DPL*, bears*, SENN).
+# Tested with Python 3.9-3.12, CUDA-enabled torch 2.x (the paper's original
+# experiments used Python 3.9 / torch 1.13; both are compatible with this code).
+
+torch>=1.13
+torchvision>=0.14
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+opencv-python
+Pillow
+h5py
+joblib
+tqdm
+
+# Probabilistic-logic reasoning layer used by DPL / DPL* / bears*
+problog>=2.2
+
+# Contrastive-learning mitigation (InfoNCE)
+info-nce-pytorch
+
+# Experiment logging (optional at runtime, enabled via --wandb <project>)
+wandb
+setproctitle
+
+# LR warmup scheduler used by DSL/DPL* training
+warmup-scheduler @ git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
+
+# Only needed for rss/preprocessing/yolo (fine-tuning YOLOv11 to preprocess Clevr scenes)
+ultralytics
